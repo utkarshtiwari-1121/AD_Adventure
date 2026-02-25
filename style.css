@@ -1,11 +1,60 @@
-*{
+@font-face {
+    font-family: "Good Brush";
+    src: url(assets/font/Good\ Brush.otf);
+}
+
+@font-face {
+    font-family: "Helvetica Neue Black Italic";
+    src: url(assets/font/helvetica-neue-5/HelveticaNeueBlackItalic.otf);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     max-width: 1920px;
     margin: 0 auto;
-    background-color: rgb(55, 52, 52);
+    background-color: rgb(53, 49, 49);
 }
+
+.hero {
+    aspect-ratio: 16/8;
+    /* border: 1px solid papayawhip;– */
+}
+
+.hero__banner-img-one {
+    position: relative;
+    /* border: 4px solid rgb(244, 162, 20); */
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.hero_main_img {
+    position: absolute;
+}
+
+.hero__first__layer-content-wrapper {
+    position: relative;
+}
+
+.hero_adlogo-wrapper{
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    /* top: 0;
+    left: 0; */
+}
+
+/* .hero_logo-img,
+.hero_lovecars-logo {
+    width: auto;
+    height: auto;
+} */
