@@ -24,9 +24,11 @@
     --body-font: "HelveticaNeueLight", sans-serif;
     --heading-font: "HelveticaNeueBold", sans-serif;
 
-    --font-body: 20px;
-    --font-heading: 50px;
-    --font-cta: 25px;
+    --font-size-body: 20px;
+    --font-size-heading: 50px;
+    --font-size-cta: 25px;
+    --font-size-section-heading: 45px;
+    --font-size-links: 18px;
 }
 
 body {
@@ -130,7 +132,7 @@ body {
     height: 100%;
 }
 
-.hero_logo-img{
+.hero_logo-img {
     max-width: 11rem;
 }
 
@@ -153,16 +155,21 @@ body {
 
 .hero__sunshine_image-wrapper {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    right: 0;
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    right: -20;
     z-index: 4;
+    /* border: 1px solid red; */
+    mix-blend-mode: screen;
+
 }
 
 .hero_sunshine_image {
     width: 100%;
     height: 100%;
+    /* mix-blend-mode:screen; */
+
 
 
 }
@@ -195,7 +202,7 @@ body {
     font-family: var(--heading-font);
     color: white;
     text-align: center;
-    font-size: var(--font-heading);
+    font-size: var(--font-size-heading);
 
 }
 
@@ -205,7 +212,7 @@ body {
     /* align-items: center; */
     color: white;
     padding: 0 5%;
-    font-size: var(--font-body);
+    font-size: var(--font-size-body);
     font-family: var(--body-font);
     line-height: 1.3;
 
@@ -217,18 +224,264 @@ body {
     width: 100%;
     bottom: 0;
     height: 30%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.897) 100%);
     z-index: 2;
 }
 
 .hero_footer-content {
     /* border: 1px solid red; */
-    max-width: 61vw;
+    max-width: 75%;
 }
 
 .cta {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: var(--font-cta);
+    font-size: var(--font-size-cta);
+    font-family: var(--body-font);
+}
+
+.drivebold {
+    /* border: 2px solid rgb(16, 169, 32); */
+    width: 100%;
+    /* aspect-ratio: 16/8.2; */
+    /* height: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10% 5%;
+    position: relative;
+    /* border: 2px solid red; */
+    /* padding: 5rem 0; */
+}
+
+.drivebold_banner-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.drivebold_banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: top; */
+}
+
+
+
+
+.drivebold_content_wrapper {
+    /* border: 2px solid red; */
+    z-index: 2;
+    position: relative;
+    max-width: 33%;
+    color: white;
+
+    /* height: 100%; */
+}
+
+.drivebold_content-heading {
+    font-family: var(--heading-font);
+    font-size: var(--font-size-heading);
+    margin-bottom: 1rem;
+}
+
+.drivebold_content-heading h2:first-child {
+    font-family: var(--cursive-font);
+    color: red;
+    transform: rotate(-3deg);
+}
+
+.drivebold_content-heading h2:nth-child(2) {
+    font-family: var(--heading-font);
+    color: white;
+    /* transform: rotate(-3deg); */
+    white-space: nowrap;
+    font-size: var(--font-size-section-heading);
+    align-self: flex-end;
+}
+
+.drivebold_content-body {
+    font-family: var(--body-font);
+    font-size: var(--font-size-body);
+    line-height: 1.3;
+
+}
+
+.drivebold_content-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.drivebold_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.drivebold_grad {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.97) 0%, rgba(14, 14, 14, 0.079) 100%);
+    /* z-index: 1; */
+}
+
+.ultimatefilm_main-wrapper {
+    /* border: 2px solid red; */
+    color: white;
+    background: rgb(0, 0, 0);
+    padding: 0 5%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.ultimatefilm_heading-wrapper h3 {
+    font-family: var(--body-font);
+    font-size: 40px;
+    /* font-size: var(--font-size-section-heading); */
+    text-align: center;
+    padding-top: 5rem;
+
+}
+
+.ultimatefilm_heading-wrapper h2 {
+    font-family: var(--heading-font);
+    font-size: 60px;
+    text-align: center;
+    /* transform: rotate(-3deg); */
+}
+
+.ultimatefilm_car-mid-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ultimatefilm_car-image-wrapper {
+    width: 50%;
+    /* border: 2px solid red; */
+
+}
+
+.ultimate_car_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ultimate-links {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    gap: 2rem;
+    padding: 5rem 0;
+}
+
+.ultimate-links div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: var(--font-size-links);
+    font-family: var(--body-font);
+}
+
+.ultimate-links div p {
+    color: white;
+    max-width: 50%;
+
+}
+
+.ultimate-links div img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.ultimatefilm_footer {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* gap: 1rem; */
+}
+
+.ultimatefilm_footer-content {
+    color: #BFBFBF;
+    font-family: var(--body-font);
+    font-size: var(--font-size-body);
+    max-width: 60%;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ultimatefilm_footer-images-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 1rem;
+}
+
+.ultimatefilm_footer-images-wrapper img {
+    width: 90%;
+    /* height: 4rem; */
+}
+
+.ultimatefilm_footer-images-wrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ultimatefilm_footer-images-wrapper div p {
+    color: white;
+    font-family: var(--body-font);
+    font-size: var(--font-size-links);
+    /* border: 1px solid red; */
+    max-width: 55%;
+    text-align: center;
+}
+
+.getready {
+    /* border: 2px solid red; */
+    width: 100%;
+    aspect-ratio: 16/8.2;
+    position: relative;
+}
+
+.getready_background_img-wrapper {
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.getready_bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.4);
+}
+
+
+.getready_video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.getready_video {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
