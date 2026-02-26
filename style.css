@@ -477,6 +477,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    padding: 5% 5%;
 
 }
 
@@ -485,3 +486,82 @@ body {
     width: 100%;
     height: 100%;
 }
+
+
+.footer {
+    background-color: rgb(10, 10, 10); 
+    color: white;
+    padding: 5% 5%;
+    width: 100%;
+    /* border-top: 1px solid rgb(181, 230, 4); Optional subtle divider */
+}
+
+.footer_main-wrapper {
+    display: grid;
+    /* 1.7fr for the first column, 1fr for the rest */
+    grid-template-columns: 1.7fr 1fr 1fr 1fr 1fr; 
+    gap: 3rem;
+    align-items: start;
+    max-width: 100%;
+}
+
+.footer__logo-description {
+    /* Explicitly defining grid start and end as requested */
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2; */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; 
+}
+
+.footer_logo-img {
+    max-width: 14rem; 
+    height: auto;
+}
+
+.footer_description-text {
+    font-family: var(--body-font);
+    font-size: var(--font-size-links); 
+    color: white; 
+    line-height: 1.5;
+    max-width: 85%;
+}
+
+.footer__attribute-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+.footer__attribute-list p {
+    font-family: var(--body-font);
+    font-size: var(--font-size-links);
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer__attribute-list p:hover {
+    color: white; /* Clean hover effect */
+}
+
+@media (max-width: 1024px) {
+    .footer_main-wrapper {
+        grid-template-columns: 1fr 1fr; /* Stack into 2 columns on tablets */
+        gap: 4rem 2rem;
+    }
+    
+    .footer__logo-description {
+        grid-column: 1 / -1; /* Make the logo span full width on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer_main-wrapper {
+        grid-template-columns: 1fr; /* Stack completely on mobile */
+    }
+}
+
