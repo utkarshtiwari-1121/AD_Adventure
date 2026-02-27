@@ -24,7 +24,7 @@
     --body-font: "HelveticaNeueLight", sans-serif;
     --heading-font: "HelveticaNeueBold", sans-serif;
 
-    --font-size-body: clamp(1rem, 0.3836rem + 0.722vw, 1.25rem); 
+    --font-size-body: clamp(1rem, 0.3836rem + 0.722vw, 1.25rem);
     --font-size-heading: clamp(2.8125rem, 2.042rem + 0.9025vw, 3.125rem);
     --font-size-cta: clamp(1.4375rem, 1.1293rem + 0.361vw, 1.5625rem);
     --font-size-section-heading: clamp(2.375rem, 1.2963rem + 1.2635vw, 2.8125rem);
@@ -101,7 +101,10 @@ body {
     /* margin-top: 10rem; */
     transform: rotate(-6deg);
     /* gap: 5rem; */
-    padding: 4.5% 5%;
+    /* padding: 4.5% 5%; */
+
+    /* 1920 to 1024 padding */
+    padding: clamp(3.2rem, 1.1429rem + 3.2143vw, 5rem) 5%;
     margin: 0 auto;
 }
 
@@ -114,7 +117,6 @@ body {
 .love,
 .rig {
     /* 1920 to 1366 - 13 to 9 rem */
-    /* font-size: clamp(10rem, 2.6029rem + 8.6643vw, 13rem); */
     font-size: 13rem;
     font-size: clamp(9rem, -0.8628rem + 11.5523vw, 13rem);
     color: red;
@@ -124,7 +126,7 @@ body {
 .your {
     /* font-size: 8rem; */
     /* 1920 to 1366 8 to 6 rem */
-font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
+    font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     /* transform: rotate(-6deg); */
     display: inline-block;
 
@@ -135,6 +137,56 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     display: inline-block;
     align-self: flex-end;
     /* margin-left: 50rem; */
+}
+
+@media (max-width:1366px) {
+
+    .love,
+    .rig {
+        font-size: clamp(6.5rem, -0.9854rem + 11.6959vw, 9rem);
+    }
+
+    .your {
+        font-size: clamp(4.5rem, 0.0088rem + 7.0175vw, 6rem);
+    }
+
+    :root {
+        --font-size-body: clamp(0.875rem, 0.5007rem + 0.5848vw, 1rem);
+        --font-size-cta: clamp(1.125rem, 0.1893rem + 1.462vw, 1.4375rem);
+        --font-size-heading: clamp(2.1875rem, 0.3162rem + 2.924vw, 2.8125rem);
+        --font-size-section-heading: clamp(1.875rem, 0.3779rem + 2.3392vw, 2.375rem);
+        --font-size-cursive-heading: clamp(3.125rem, 2.1893rem + 1.462vw, 3.4375rem);
+
+        --font-size-links: clamp(0.6875rem, 0.0325rem + 1.0234vw, 0.90625rem);
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    .hero {
+        aspect-ratio: 16/13.2;
+    }
+
+    .love,
+    .rig {
+        font-size: clamp(5rem, 0.5rem + 9.375vw, 6.5rem);
+    }
+
+    .your {
+        font-size: clamp(3.5rem, 0.5rem + 6.25vw, 4.5rem);
+    }
+
+    .love_your_self-wrapper {
+    /* position: absolute; */
+
+    padding: clamp(5.2rem, 11.2rem + -12.5vw, 3.2rem) 5%;
+}
+
+
+
+    :root {}
+
 }
 
 .hero_logo-img,
@@ -208,7 +260,8 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     width: 100%;
     /* border: 1px solid red; */
     margin: 0 auto;
-    padding-top: 3rem;
+    /* padding top 3 to 2 rem - 1920 to 1024 px */
+    padding-top: clamp(2rem, 0.8571rem + 1.7857vw, 3rem);
 }
 
 .hero__footer__heading {
@@ -256,11 +309,12 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     border: none;
     /* Removes default button border */
     font-family: var(--body-font);
+    white-space: nowrap;
     color: white;
 }
 
 .cta img {
-    width: clamp(1.6rem, 0.6137rem + 1.1552vw, 2rem);
+    width: clamp(.6rem, 0.6137rem + 1.1552vw, 2rem);
     height: auto;
 }
 
@@ -335,6 +389,19 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
 
 }
 
+.drivebold_content-styling {
+    margin-top: 1.5rem;
+    display: block;
+}
+
+@media (max-width:1366px) {
+
+    .drivebold_content-styling {
+        margin-top: clamp(1rem, -0.4971rem + 2.3392vw, 1.5rem);
+    }
+
+}
+
 .drivebold_content-heading {
     display: flex;
     flex-direction: column;
@@ -343,7 +410,8 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
 .drivebold_content_wrapper {
     display: flex;
     flex-direction: column;
-    gap: clamp(3rem, -1.9314rem + 5.7762vw, 5rem);
+    /* 1920 to 1024 px */
+    gap: clamp(2rem, -1.4286rem + 5.3571vw, 5rem);
 }
 
 .drivebold_grad {
@@ -416,6 +484,8 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     gap: clamp(1rem, -1.4657rem + 2.8881vw, 2rem);
     font-size: var(--font-size-links);
     font-family: var(--body-font);
+    height: 3rem;
+
 }
 
 .ultimate-links div p {
@@ -475,7 +545,7 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     font-family: var(--body-font);
     font-size: var(--font-size-links);
     /* border: 1px solid red; */
-    max-width: 84%;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -533,6 +603,7 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
     /* border: 2px solid red; */
     color: white;
     max-width: 800px;
+    width: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -606,7 +677,7 @@ font-size: clamp(6rem, 1.0686rem + 5.7762vw, 8rem);
 
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: clamp(1rem, -1.2857rem + 3.5714vw, 3rem);
 }
 
 .footer_logo-img {
