@@ -138,7 +138,11 @@ body {
     align-self: flex-end;
     /* margin-left: 50rem; */
 }
-
+@media (max-width:1500px) {
+    .hero{
+        aspect-ratio: 16/9;
+    }
+}
 @media (max-width:1366px) {
 
     .love,
@@ -162,32 +166,6 @@ body {
 
 }
 
-@media (max-width:1024px) {
-
-    .hero {
-        aspect-ratio: 16/13.2;
-    }
-
-    .love,
-    .rig {
-        font-size: clamp(5rem, 0.5rem + 9.375vw, 6.5rem);
-    }
-
-    .your {
-        font-size: clamp(3.5rem, 0.5rem + 6.25vw, 4.5rem);
-    }
-
-    .love_your_self-wrapper {
-    /* position: absolute; */
-
-    padding: clamp(5.2rem, 11.2rem + -12.5vw, 3.2rem) 5%;
-}
-
-
-
-    :root {}
-
-}
 
 .hero_logo-img,
 .hero_lovecars-logo {
@@ -246,7 +224,7 @@ body {
     height: 100%;
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-rows: 2.5fr .5fr .5fr;
+    grid-template-rows: 2.5fr .5fr .6fr;
     /* Aligns all items to the bottom of the container */
     align-items: start;
 }
@@ -290,7 +268,7 @@ body {
     width: 100%;
     bottom: 0;
     height: 30%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.897) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     z-index: 2;
 }
 
@@ -317,6 +295,59 @@ body {
     width: clamp(.6rem, 0.6137rem + 1.1552vw, 2rem);
     height: auto;
 }
+
+@media (max-width:1024px) {
+
+    .hero {
+        aspect-ratio: 16/13.2;
+    }
+
+    .love,
+    .rig {
+        font-size: clamp(5rem, 0.5rem + 9.375vw, 6.5rem);
+    }
+
+    .your {
+        font-size: clamp(3.5rem, 0.5rem + 6.25vw, 4.5rem);
+    }
+
+    .love_your_self-wrapper {
+        /* position: absolute; */
+
+        padding: clamp(5.2rem, 11.2rem + -12.5vw, 3.2rem) 5%;
+    }
+
+    .hero_footer-content {
+        max-width: 60%;
+    }
+
+
+    :root {
+        --font-size-heading: clamp(1.875rem, 0.9375rem + 1.9531vw, 2.1875rem);
+        --font-size-cursive-heading: clamp(2.5rem, 0.625rem + 3.9063vw, 3.125rem);
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .hero_adlogo-wrapper {
+    padding-left:  clamp(1.25rem, -6.2292rem + 12.2744vw, 8.5rem);
+    padding-right:  clamp(1.25rem, -6.2292rem + 12.2744vw, 8.5rem);
+    
+}
+.hero{
+    aspect-ratio: 9/16;
+}
+
+.hero__footer {
+    flex-direction: column;
+}
+
+.hero_footer-content{
+    max-width: 100%;
+}
+}
+
 
 .drivebold {
     /* border: 2px solid rgb(16, 169, 32); */
@@ -386,6 +417,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--font-size-body);
     line-height: 1.3;
+    color: #BFBFBF;
 
 }
 
@@ -400,6 +432,9 @@ body {
         margin-top: clamp(1rem, -0.4971rem + 2.3392vw, 1.5rem);
     }
 
+    .drivebold_content_wrapper{
+        max-width: 400px
+    }
 }
 
 .drivebold_content-heading {
@@ -421,8 +456,47 @@ body {
     height: 20%;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.97) 0%, rgba(14, 14, 14, 0.079) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
     /* z-index: 1; */
+}
+
+@media (max-width:768px) {
+    .drivebold_banner-wrapper {
+        position: relative;
+    }
+
+    .drivebold {
+        flex-direction: column-reverse;
+        background: black;
+        align-items: center;
+        padding: 0;
+    }
+
+    .drivebold_content_wrapper {
+        max-width: 100%;
+        padding: 5% clamp(4.25rem, -6.2292rem + 12.2744vw, 8.5rem);
+        ;
+    }
+
+    .drivebold_grad {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 20%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(8, 8, 8, 0.97) 0%, rgba(14, 14, 14, 0.079) 100%);
+        /* z-index: 1; */
+    }
+
+    .drivebold_content-heading h2:nth-child(2) {
+        align-self: auto;
+        padding-left: 4rem;
+    }
+
+
+
 }
 
 .ultimatefilm_main-wrapper {
@@ -440,7 +514,7 @@ body {
     font-size: var(--font-size-ultimate-film-line);
     /* font-size: var(--font-size-section-heading); */
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 6rem;
 
 }
 
@@ -525,7 +599,7 @@ body {
 .ultimatefilm_footer-images-wrapper {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 2rem;
     padding-top: 1rem;
 }
 
@@ -549,6 +623,35 @@ body {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+
+    .ultimatefilm_car-mid-content-wrapper {
+        flex-direction: column;
+    }
+
+    .ultimate-links {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .ultimatefilm_heading-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .ultimate-links div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ultimate-links :nth-child(4) img {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+
+}
+
 .getready {
     /* border: 2px solid red; */
     width: 100%;
@@ -569,7 +672,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(.4);
+    /* filter: brightness(.4); */
+    mix-blend-mode: multiply;
 }
 
 .getready {
@@ -607,7 +711,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3.5rem;
+    gap: clamp(2rem, 1rem + 2.0833vw, 3.5rem);
 }
 
 
@@ -648,6 +752,34 @@ body {
 .getready_button {
     margin-top: 1rem;
     /* gap: 1rem; */
+}
+
+@media (max-width:768px) {
+
+    .ultimatefilm_footer-images-wrapper img {
+        width: 75%;
+        height: 4rem;
+    }
+
+    .ultimatefilm_footer-images-wrapper {
+        display: flex;
+        justify-content: center;
+        /* gap: 4rem; */
+        padding-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .ultimatefilm_footer-content {
+        max-width: 80%;
+        padding: 2% 0;
+    }
+
+.ultimate-links div p {
+    text-align: center;
+}
+
+
+
 }
 
 
@@ -713,4 +845,29 @@ body {
 .footer_link {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width:768px) {
+
+    .footer_main-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__logo-description {
+        grid-column: 1 / 3;
+        max-width: 40%;
+        align-items: center;
+    }
+
+    .footer_main-wrapper {
+        justify-items: center;
+    }
+
+    .footer_description-text {
+        text-align: center;
+    }
+
+
+
+
 }
