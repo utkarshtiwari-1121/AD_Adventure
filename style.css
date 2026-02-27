@@ -410,13 +410,19 @@ body {
 
 .ultimate-links div p {
     color: white;
-    max-width: 50%;
+    /* max-width: 50%; */
 
 }
 
 .ultimate-links div img {
     width: 4rem;
     height: 4rem;
+}
+
+.ultimate-links :nth-child(4) img {
+    width: 4rem;
+    height: 3rem;
+
 }
 
 .ultimatefilm_footer {
@@ -612,7 +618,7 @@ body {
     gap: 1.5rem;
 }
 
-.footer__attribute-list p {
+.footer__attribute-list a {
     font-family: var(--body-font);
     font-size: var(--font-size-links);
     color: white;
