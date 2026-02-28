@@ -278,7 +278,7 @@ body {
 
 .hero_footer-content {
     /* border: 1px solid red; */
-    max-width: 75%;
+    max-width: 58%;
 }
 
 .cta {
@@ -326,6 +326,16 @@ body {
     .hero_footer-content {
         max-width: 60%;
     }
+
+    .hero_grad {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 40%;
+        background: linear-gradient(to bottom, rgba(92, 96, 92, 0.199) 1%, rgb(0, 0, 0) 100%);
+        z-index: 3;
+    }
+
 
 
     :root {
@@ -382,7 +392,7 @@ body {
         position: absolute;
         width: 100%;
         bottom: 0;
-        height: 35%;
+        height: 40%;
         background: linear-gradient(to bottom, rgba(92, 96, 92, 0.199) 1%, rgb(0, 0, 0) 100%);
         z-index: 3;
     }
@@ -463,7 +473,7 @@ body {
 
 .drivebold_content-heading h2:first-child {
     font-family: var(--cursive-font);
-    color: red;
+    color: #E31F22;
     transform: rotate(-3deg);
     font-size: var(--font-size-cursive-heading);
 }
@@ -539,7 +549,7 @@ body {
 
     .drivebold_content_wrapper {
         max-width: 100%;
-        padding: 5% clamp(2.25rem, -0.5909rem + 7.5758vw, 8.5rem);
+        padding: 10% clamp(2.25rem, -0.5909rem + 7.5758vw, 8.5rem);
         ;
         align-items: center;
 
@@ -593,7 +603,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--font-size-ultimate-film-line);
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 3rem;
 
 }
 
@@ -766,6 +776,19 @@ body {
     }
 }
 
+.ultimatefilm_footer-images-wrapper div p.coming_soon{
+    font-family: var(--cursive-font);
+    color: #E31F22;
+    font-size: 15px;
+    /* font-size: var(--font-size-cursive-heading); */
+    transform: rotate(15deg);
+    margin-bottom: -20px;
+        margin-left: 2rem;
+
+    /* text-align: center; */
+}
+
+
 .getready {
     /* border: 2px solid red; */
     width: 100%;
@@ -811,7 +834,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(.5);
+    filter: brightness(.4);
 }
 
 @media (max-width:600px) {
@@ -824,6 +847,7 @@ body {
     .getready_video {
         width: 100%;
         height: auto;
+        aspect-ratio: 9/13;
     }
 
 
@@ -861,7 +885,7 @@ body {
 .getready_expeditions {
     display: block;
     font-family: var(--cursive-font);
-    color: red;
+    color: #E31F22;
     font-size: var(--font-size-cursive-heading);
     transform: rotate(-3deg);
     margin-top: -10px;
@@ -930,7 +954,7 @@ body {
 .footer {
     background-color: rgb(10, 10, 10);
     color: white;
-    padding: 5% clamp(2.25rem, -0.5909rem + 7.5758vw, 8.5rem);
+    padding: 2% clamp(2.25rem, -0.5909rem + 7.5758vw, 8.5rem);
     width: 100%;
     /* border-top: 1px solid rgb(181, 230, 4); Optional subtle divider */
 }
@@ -938,9 +962,10 @@ body {
 .footer_main-wrapper {
     display: grid;
     /* 1.7fr for the first column, 1fr for the rest */
-    grid-template-columns: 1.7fr 1fr 1fr 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
+    grid-template-columns: 1.7fr 1fr 1fr 1fr;
+
+    gap: 1rem;
+    align-items: center;
     max-width: 100%;
 }
 
@@ -961,7 +986,7 @@ body {
 .footer_logo-img {
     /* max-width: 14rem; */
     height: auto;
-    width: 65%;
+    width: 44%;
 }
 
 .footer_description-text {
@@ -980,7 +1005,7 @@ body {
 
 .footer__attribute-list a {
     font-family: var(--body-font);
-    font-size: var(--font-size-links);
+    font-size: var(--font-size-body);
     color: white;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -993,14 +1018,36 @@ body {
     color: white;
 }
 
+.footer_right_reserve_wrapper {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    /* grid-column: 1/5; */
+    background: white;
+
+}
+
+.footer_rights-text {
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+    padding: 1% 0;
+    color: black;
+
+}
+
 @media (max-width:768px) {
 
     .footer_main-wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .footer__logo-description {
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
         max-width: 40%;
         align-items: center;
     }
@@ -1013,9 +1060,12 @@ body {
         text-align: center;
     }
 
+    .footer_main-wrapper {
+        gap: 1rem;
+        row-gap: 2rem;
 
 
-
+    }
 }
 
 @media (max-width:600px) {
@@ -1023,6 +1073,4 @@ body {
     .footer__logo-description {
         max-width: 60%;
     }
-
-
 }
