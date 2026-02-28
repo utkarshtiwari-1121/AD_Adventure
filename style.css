@@ -705,7 +705,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
+
+.ultimatefilm_footer-images-wrapper:nth-child(4) div {
+    position: relative;
+}
+
 
 .ultimatefilm_footer-images-wrapper div p {
     color: white;
@@ -752,47 +758,60 @@ body {
     }
 
     .ultimatefilm_heading-wrapper h3 {
-    padding-top: 2rem;
-
-}
-
-
-}
-
-    @media (max-width:404px) {
-
-        .ultimatefilm_car-image-wrapper {
-            width: 100%;
-            height: 100%;
-
-            /* border: 2px solid red; */
-
-        }
-
-        .ultimate_car_img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .ultimate-links {
-            gap: 1.3rem;
-        }
+        padding-top: 2rem;
 
     }
 
 
-.ultimatefilm_footer-images-wrapper div p.coming_soon{
+}
+
+@media (max-width:404px) {
+
+    .ultimatefilm_car-image-wrapper {
+        width: 100%;
+        height: 100%;
+
+        /* border: 2px solid red; */
+
+    }
+
+    .ultimate_car_img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .ultimate-links {
+        gap: 1.3rem;
+    }
+
+}
+
+
+/* .ultimatefilm_footer-images-wrapper div p.coming_soon {
     font-family: var(--cursive-font);
     color: #E31F22;
     font-size: 15px;
-    /* font-size: var(--font-size-cursive-heading); */
     transform: rotate(15deg);
-    margin-bottom: -20px;
-        margin-left: 2rem;
+    margin-bottom: -35px;
+    margin-left: 2rem;
 
-    /* text-align: center; */
+} */
+
+.ultimatefilm_footer-images-wrapper div p.coming_soon {
+    position: absolute;
+    top: -6%;
+    left: 54%;
+    transform: rotate(15deg);
+    font-family: var(--cursive-font);
+    line-height: .9;
+    color: #E31F22;
+    font-size: clamp(14px, 1.2vw, 22px);
+    z-index: 2;
+    pointer-events: none; /* optional */
 }
+
+
 
 
 .getready {
@@ -1081,9 +1100,9 @@ body {
     }
 
     .footer_rights-text {
-    font-family: var(--body-font);
-    font-size: 10px;
+        font-family: var(--body-font);
+        font-size: 10px;
 
-}
+    }
 
 }
